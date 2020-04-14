@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="./lib/Promise.js"></script> -->
+    <script src="./lib/PromiseClass.js"></script>
+    <script>
+        // let p1 = Promise.resolve(1)
+        // let p2 = Promise.reject(2)
+        // let p3 = Promise.resolve(Promise.resolve(3))
+        // let ret = Promise.all([p1,p2, p3])
+        // console.log('ret', ret);
+        // let p1 = new Promise((resolve, reject) => {
+        //     resolve('p1')
+        // })
+        let p2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('p2')
+            }, 0);
+        })
+        // p1.then((value) => {
+        //     console.log('onResolved()', value);
+        // })
+        // .then((value) => {
+        //     console.log('onResovled()2', value);
+            
+        // })
+        p2.then((value) => {
+            console.log('onResolved()', value);
+            
+        },
+        (reason) => {
+            console.log('onRejected()', reason);
+            
+        })
+        
+    </script>
+</body>
+</html>

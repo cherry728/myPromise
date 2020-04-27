@@ -8,12 +8,17 @@
 </head>
 <body>
     <!-- <script src="./lib/Promise.js"></script> -->
-    <script src="./lib/PromiseClass.js"></script>
+    <script src="./lib/Promise1.js"></script>
     <script>
         // let p1 = Promise.resolve(1)
         // let p2 = Promise.reject(2)
         // let p3 = Promise.resolve(Promise.resolve(3))
         // let ret = Promise.all([p1,p2, p3])
+        // ret.then(value => {
+        //     console.log(value);
+        // }, reason => {
+        //     console.log(reason);
+        // })
         // console.log('ret', ret);
         // let p1 = new Promise((resolve, reject) => {
         //     resolve('p1')
@@ -36,6 +41,9 @@
         },
         (reason) => {
             console.log('onRejected()', reason);
+            
+        }).then(value => {
+            console.log('onResolved1()', value);
             
         })
         
